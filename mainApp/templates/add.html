@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% load static %}
+        {% block title %}
+        <title>ADD|CRUD</title>
+        {% endblock %}
+        
+    {% block body %}
+    <div class=" container-fluid my-3 ">
+    <h5 class=" bg-info-subtle text-center p-2"> Add Employee Record <h5>
+     <div class=" card p-4 bg-light my-2">
+      <form  action="" method="post">
+      {% csrf_token %}
+        <div >
+          <label>Name</label>
+          <input type="text" name="name" required placeholder="Enter your full name here: " class="form-control">
+        </div>
+        <div  class="row mb-3">
+          <div class= "col-md-6 p-2">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="Enter your email here: " class="form-control">
+          </div>
+          <div class= "col-md-6 p-2">
+               <label>Phone</label>
+               <input type="phone" name="phone" required placeholder="Enter your Phone number here: " class="form-control">
+          </div>
+          <div class="col-md-6 p-2">
+                <label>Designation</label>
+                <input type="text" name="dsg" required placeholder="Enter your occupation : " class="form-control">
+          </div>
+          <div class="col-md-6 p-2">
+                <label>Salary</label>
+                <input type="number" name="salary" required placeholder="Enter your  current salary : " class="form-control">
+          </div>
+           <div class="col-md-6 p-2">
+                <label>City</label>
+                <input type="text" name="city"  required placeholder="Enter your city name : " class="form-control">
+          </div>
+          <div class="col-md-6 p-2">
+                <label>State</label>
+                <input type="text" name="state" required placeholder="Enter your State name : " class="form-control">
+          </div>
+          <div class="col-6">
+              <button type="Reset" class="btn btn-danger w-100 btn-sm">Reset</button>
+          </div>
+          <div class="col-6">
+              <button type="submit" class="btn btn-success w-100 btn-sm">Submit</button>
+          </div>
+        </div>
+      </form>
+     </div>
+    </div> 
+    {% endblock %}
+       
